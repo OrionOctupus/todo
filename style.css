@@ -1,0 +1,49 @@
+* {
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+#app {
+    width: 800px;
+    /* border: 1px solid darkblue; */
+    margin:100px auto;
+    /* padding: 10px 0; */
+}
+
+header{
+    text-align: center;
+    padding: 10px;
+    background-color: beige;
+
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+#todo-form {
+    display: flex;
+    border-top: 1px solid #d9d9d9;
+    justify-content: space-around;
+    background-color: lightgray;
+    padding: 15px 0; 
+}
+
+.todo-item.completed .title {
+    text-decoration: line-through;
+}
+
+.todo-item.editing .title {
+    display: none;
+}
+
+.todo-item .textfield {
+    display: none;
+}
+
+.todo-item.editing .textfield {
+    display: block;
+}
