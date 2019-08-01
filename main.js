@@ -1,3 +1,4 @@
+(function() {
 const todoForm = document.querySelector('#todo-form'); // форма
 const addInput = document.querySelector('#add-input'); // поле
 const todoList = document.querySelector('#todo-list'); // список
@@ -95,3 +96,4 @@ function main(){
     todoForm.addEventListener('submit', addTodoItem);
     todoItems.forEach(item => bindEvents(item));
 }
+})();

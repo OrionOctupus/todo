@@ -6,30 +6,43 @@
 
 #app {
     width: 800px;
-    /* border: 1px solid darkblue; */
     margin:100px auto;
-    /* padding: 10px 0; */
 }
 
 header{
     text-align: center;
     padding: 10px;
     background-color: beige;
-
 }
+
 
 .todo-item {
     display: flex;
-    justify-content: space-around;
-    margin: 30px 0;
+    border-top: 1px solid lightgray;
+    background-color: #fff;
+    transition: all .2s;
+    padding: 10px;
+    align-items: center;
 }
 
-#todo-form {
-    display: flex;
-    border-top: 1px solid #d9d9d9;
-    justify-content: space-around;
-    background-color: lightgray;
-    padding: 15px 0; 
+.todo-item button {
+    opacity: 0;
+    transition: all .2s;
+}
+
+.todo-item:hover button {
+    opacity: 1;
+}
+
+.title,
+.textfield {
+    margin-right: auto;
+    flex:1;
+    padding: 10px;
+}
+
+.checkbox {
+    margin-right: 15px;
 }
 
 .todo-item.completed .title {
@@ -46,4 +59,78 @@ header{
 
 .todo-item.editing .textfield {
     display: block;
+}
+
+
+
+#todo-form {
+    display: flex;
+    background-color: #FAFAFA;
+    border-top: 1px solid lightgray;
+    padding-top: 10px;
+}
+
+#todo-form input {
+    flex: 1;
+    outline: none;
+    transition: all .2s;
+    padding: 10px;
+}
+
+#add-input:focus {
+    border: 1px solid lightgreen;
+}
+
+
+
+button {
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+
+button:hover{
+    background-color: lightgray;
+}
+
+.edit:hover {
+    border: 1px solid lightblue;
+    background-color: #fff;
+}
+
+.edit:active {
+    border: 1px solid blue;
+    background-color: lightblue;
+}
+
+.delete:hover {
+    border: 1px solid red;
+    background-color: #fff;
+}
+
+.delete:active {
+    border: 1px solid red;
+    background-color: lightcoral;
+}
+
+#add-button {
+    margin-left: 10px;
+    background-color: lightgray;
+    color: #000;
+}
+
+#add-button:hover {
+    border: 1px solid lightgreen;
+    background-color: #fff;
+}
+
+#add-button:active {
+    border: 1px solid green;
+    background-color: lightgreen;
 }
